@@ -1,0 +1,31 @@
+{
+  "name": "rsl_database",
+  "version": "0.1.0",
+  "description": "This Module manages connections to a MySQL database and provides utility functions for queuing querys",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewTrefethen/rsl_database.git"
+  },
+  "keywords": [
+    "Database",
+    "MySQL",
+    "Queueing"
+  ],
+  "author": "Andrew Trefethen <andrew.l.trefethen@gmail.com> (https://www.facebook.com/alttrefethen)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewTrefethen/rsl_database/issues"
+  },
+  "homepage": "https://github.com/AndrewTrefethen/rsl_database#readme",
+  "dependencies": {
+    "mysql": "^2.11.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
