@@ -44,13 +44,17 @@ This Node JS Module handles connections to a MySQL database and provides some ut
   //queue.push(database.enqueueQuery(query[,fillins])); //pass the same values you would to directly query the database
 
   queue.push(database.enqueueQuery("SELECT 1 + 1 As Sum"));
+
   queue.push(database.enqueueQuery("SELECT 2 + 2 As Sum"));
+
   queue.push(database.enqueueQuery("SELECT 4 + 4 As Sum"));
 
-  //once the queue is filled with the desired queries, we need to query the whole queue
 
-  database.queryQueue(queue,callback(err,results));
-  /*
+  //once the queue is filled with the desired queries, we need to query the whole queue
+  //database.queryQueue(queue,callback(err,results));
+
+  database.queryQueue(queue,function(err,results){
+  	/*
   	results = [
   		[
   			{Sum:2}
@@ -60,7 +64,8 @@ This Node JS Module handles connections to a MySQL database and provides some ut
   			{Sum:8}
   		]
   	]
-  */
+  	*/
+  });
   //results is an array of arrays, each query in the queue pushed its rows array onto the end of the results array in order
   //the queryQueue function will callback with an Error if there was an error ANYWEHRE in the queue
 
