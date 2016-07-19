@@ -86,7 +86,7 @@ function QueryQueue(queue,callback,index){
 	else if(queue.length === index + 1)
 	{
 		if(typeof queue[index].query !== 'undefined'){
-			query(queue[index].query,queue[index].fillins,function(err,rows){
+			Query(queue[index].query,queue[index].fillins,function(err,rows){
 				if(err) callback(err);
 				else callback(undefined,[rows]);
 			});
@@ -98,11 +98,11 @@ function QueryQueue(queue,callback,index){
 	else
 	{
 		if(typeof queue[index].query !== 'undefined'){
-			query(queue[index].query,queue[index].fillins,function(err,rows){
+			Query(queue[index].query,queue[index].fillins,function(err,rows){
 				if(err) callback(err);
 				else
 				{
-					queueQuery(queue,function(err,qRows){
+					QueryQueue(queue,function(err,qRows){
 						if(err) callback(err);
 						else
 						{

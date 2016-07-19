@@ -1,6 +1,6 @@
 {
   "name": "rsl_database",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "This Module manages connections to a MySQL database and provides utility functions for queuing querys",
   "main": "index.js",
   "scripts": {
